@@ -298,9 +298,9 @@ input,select,textarea{font:inherit}
 <form id="rsv" style="background: #FFFFFF; padding: 32px 24px; display: flex; flex-direction: column; gap: 12px" novalidate>
 <fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px">
 <legend style="padding: 0; margin-bottom: 8px; font-size: 15px; color: #6B5A3A">ご希望のプランをお選びください</legend>
-<div class="opt"><input type="radio" name="d" id="d1" value="1泊2日（3食）宿泊プラン" checked><label for="d1"><span class="mark" aria-hidden="true"></span><span class="t"><strong>1泊2日（3食）宿泊プラン</strong><span>12/6（日）〜7（月）　メンバー感謝価格 68,900円（税込）</span></span></label></div>
-<div class="opt"><input type="radio" name="d" id="d2" value="1泊2日（3食）宿泊プラン（ペア）"><label for="d2"><span class="mark" aria-hidden="true"></span><span class="t"><strong>1泊2日（3食）宿泊プラン（ペア）</strong><span>2名でご参加　おひとり63,900円（税込）</span></span></label></div>
-<div class="opt"><input type="radio" name="d" id="d3" value="日帰りデイプラン（1食）"><label for="d3"><span class="mark" aria-hidden="true"></span><span class="t"><strong>日帰りデイプラン（1食）</strong><span>12/6（日）10:00〜16:00頃　メンバー感謝価格 39,600円（税込）</span></span></label></div>
+<div class="opt"><input type="radio" name="d" id="d1" value="宿泊プラン（1泊2日・3食付き）" checked><label for="d1"><span class="mark" aria-hidden="true"></span><span class="t"><strong>宿泊プラン</strong><span>1泊2日・3食付き<br>メンバー感謝価格 68,900円（税込）</span></span></label></div>
+<div class="opt"><input type="radio" name="d" id="d2" value="宿泊プラン・ペア（1泊2日・3食付き）"><label for="d2"><span class="mark" aria-hidden="true"></span><span class="t"><strong>宿泊プラン（ペア）</strong><span>1泊2日・3食付き<br>おひとり63,900円（税込）</span></span></label></div>
+<div class="opt"><input type="radio" name="d" id="d3" value="日帰りデイプラン（ランチ付き）"><label for="d3"><span class="mark" aria-hidden="true"></span><span class="t"><strong>日帰りデイプラン</strong><span>12/6（日）10〜16時頃・ランチ付き<br>メンバー感謝価格 39,600円（税込）</span></span></label></div>
 </fieldset>
 <label for="msg" style="margin-top: 14px; font-size: 14px; color: #6B5A3A">LINEで送る内容（空欄をご記入ください）</label>
 <textarea id="msg" readonly style="width: 100%; min-height: 220px; resize: none; border: 1px solid #E4D9C3; background: #FAF8F3; color: #2B2622; font: inherit; font-size: 14px; line-height: 1.7; padding: 12px"></textarea>
@@ -328,7 +328,7 @@ input,select,textarea{font:inherit}
   }
   function update(){
     var c=document.querySelector('input[name="d"]:checked');
-    msg.value=text(c?c.value:'1泊2日（3食）宿泊プラン');
+    msg.value=text(c?c.value:'宿泊プラン（1泊2日・3食付き）');
     go.href='https://line.me/R/oaMessage/%40oql6655u/?'+encodeURIComponent(msg.value);
     st.textContent='';
   }
