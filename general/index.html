@@ -242,12 +242,14 @@ input,select,textarea{font:inherit}
 <p style="margin: 0; font-family: 'Shippori Mincho', serif; font-size: 20px; color: #7D6230">大切な方とご一緒に ペア割</p>
 <p style="margin: 0; font-family: 'Shippori Mincho', serif; font-size: 28px">おひとり 5,000<span style="font-size: 15px">円引き</span></p>
 <p style="margin: 0; font-size: 15px; color: #4A433D">宿泊プランを2名でお申し込みで、お二人とも割引。おひとり77,680円になります。※日帰りデイプランは対象外です。</p>
+<a href="#apply" data-plan="d2" style="display: flex; align-items: center; justify-content: center; min-height: 56px; margin-top: 8px; padding: 0 24px; background: #7D6230; color: #FFFFFF; text-decoration: none; letter-spacing: 0.1em">ペアで申し込む</a>
 </div>
 <div style="background: #FFFFFF; padding: 32px; display: flex; flex-direction: column; gap: 10px; border: 1px solid #E4D9C3">
 <span style="align-self: flex-start; padding: 4px 12px; border: 1px solid #7D6230; color: #7D6230; font-size: 13px">宿泊プラン優先・残席限り</span>
 <p style="margin: 0; font-family: 'Shippori Mincho', serif; font-size: 20px; color: #7D6230">日帰り デイプラン</p>
 <p style="margin: 0; font-family: 'Shippori Mincho', serif; font-size: 28px; color: #7D6230">47,520<span style="font-size: 15px">円（税込）</span></p>
 <p style="margin: 0; font-size: 15px; color: #4A433D">セミオーダートリートメント45分・オリジナルビューティーケアアイテムづくりに、ランチのオーダービュッフェと温泉・サウナ付き。12月6日（日）10:00〜16:00頃。宿泊が難しい方に。</p>
+<a href="#apply" data-plan="d3" style="display: flex; align-items: center; justify-content: center; min-height: 56px; margin-top: 8px; padding: 0 24px; background: #7D6230; color: #FFFFFF; text-decoration: none; letter-spacing: 0.1em">日帰りで申し込む</a>
 </div>
 </div>
 <p style="margin: 0; text-align: center; font-size: 13px; color: #6B5A3A">※開催日：2026年12月6日（日）〜7日（月）　※定員：施術付き24名（宿泊プラン優先）　※最少催行人数：15名（11月21日に開催を判断し、ご連絡します）　※お部屋：1名1室（ペアの方は2名1室）</p>
@@ -342,5 +344,6 @@ input,select,textarea{font:inherit}
 </footer>
 
 </div>
+<script>document.querySelectorAll("a[data-plan]").forEach(function(a){a.addEventListener("click",function(){var r=document.getElementById(a.getAttribute("data-plan"));if(r){r.checked=true;r.dispatchEvent(new Event("change",{bubbles:true}));}});});</script>
 </body>
 </html>
