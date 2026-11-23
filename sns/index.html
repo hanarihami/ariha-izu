@@ -61,6 +61,7 @@ input,select,textarea{font:inherit}
 </div>
 <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 8px">
 <a href="#apply" style="display: inline-flex; align-items: center; justify-content: center; min-height: 60px; padding: 0 40px; background: #7D6230; color: #FFFFFF; text-decoration: none; font-size: 17px; letter-spacing: 0.12em; align-self: flex-start">クーポン価格で申し込む</a>
+<a href="https://lin.ee/vgbTg8H" target="_blank" rel="noopener" data-consult="1" style="display: inline-flex; align-items: center; justify-content: center; min-height: 56px; padding: 0 32px; border: 1px solid #7D6230; background: #FFFFFF; color: #7D6230; text-decoration: none; letter-spacing: 0.08em; align-self: flex-start">まずはLINEで相談する</a>
 </div>
 </div>
 <img src="../images/ariha-izu-01-room.jpg" alt="相模湾を望むHESTA RESORT伊豆の客室" style="flex: 1 1 460px; min-width: 0; width: 100%; aspect-ratio: 4 / 5; max-height: 640px; object-fit: cover; object-position: 72% center; display: block">
@@ -298,6 +299,12 @@ input,select,textarea{font:inherit}
 <li>最少催行人数は15名です。<b>11月21日（土）</b>の時点で15名に満たない場合は開催を見送り、お支払い済みの参加費は全額ご返金します。</li>
 </ol>
 </div>
+<div id="consult" style="background: #FFFFFF; padding: 28px 24px; display: flex; flex-direction: column; gap: 12px; align-items: center; text-align: center; border: 1px solid #E4D9C3">
+<p style="margin: 0; font-family: 'Shippori Mincho', serif; font-size: 20px; color: #2B2622">お申し込みの前に、<br>まずはご相談から</p>
+<p style="margin: 0; font-size: 14px; color: #4A433D; line-height: 1.8">「初めてでも大丈夫？」「どのケアが合う？」「ひとりで参加しても平気？」<br>空き状況やお身体のことなど、どんなことでもお気軽にどうぞ。<br>ご相談だけで、お申し込みにはなりません。</p>
+<a href="https://lin.ee/vgbTg8H" target="_blank" rel="noopener" data-consult="1" style="display: flex; align-items: center; justify-content: center; width: 100%; max-width: 420px; min-height: 56px; padding: 0 20px; background: #06C755; color: #FFFFFF; text-decoration: none; font-size: 16px; letter-spacing: 0.08em; border-radius: 4px">LINEで相談する（無料）</a>
+<p style="margin: 0; font-size: 12px; color: #6B5A3A">友だち追加のあと「伊豆イベントの相談」と送ってください</p>
+</div>
 <form id="rsv" style="background: #FFFFFF; padding: 32px 24px; display: flex; flex-direction: column; gap: 12px" novalidate>
 <fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px">
 <legend style="padding: 0; margin-bottom: 8px; font-size: 15px; color: #6B5A3A">ご希望のプランをお選びください</legend>
@@ -361,5 +368,7 @@ input,select,textarea{font:inherit}
 
 </div>
 <script>document.querySelectorAll("a[data-plan]").forEach(function(a){a.addEventListener("click",function(){var r=document.getElementById(a.getAttribute("data-plan"));if(r){r.checked=true;r.dispatchEvent(new Event("change",{bubbles:true}));}});});</script>
+<a href="https://lin.ee/vgbTg8H" target="_blank" rel="noopener" data-consult="1" id="consult-float" style="position: fixed; right: 14px; bottom: 16px; z-index: 50; display: inline-flex; align-items: center; gap: 6px; min-height: 48px; padding: 0 18px; background: #06C755; color: #FFFFFF; text-decoration: none; font-size: 14px; border-radius: 999px; box-shadow: 0 4px 14px rgba(0,0,0,.18)">LINEで相談</a>
+<script>(function(){var f=document.getElementById("consult-float"),a=document.getElementById("apply");if(!f||!a||!("IntersectionObserver" in window))return;new IntersectionObserver(function(e){f.style.display=e[0].isIntersecting?"none":"inline-flex";}).observe(a);})();</script>
 </body>
 </html>
